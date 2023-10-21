@@ -21,4 +21,8 @@ app.get("/users", (req, res) => {
   res.status(200).json(users);
 });
 
+app.get("/admin", (req, res) => {
+  res.status(403).send("<title>Forbidden</title>\n<h1>Forbidden</h1>");
+});
+
 app.listen(8080, () => console.log(`Rodando na porta ${port}`));
